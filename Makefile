@@ -1,4 +1,4 @@
-DB_URL=postgresql://simplebank:myadmin@localhost:5542/simplebank_db?sslmode=disable
+DB_URL=postgresql://root:mypass@localhost:5432/simple_bank?sslmode=disable
 
 createdb:
 	docker compose exec -it postgres createdb --username=simplebank --owner=simplebank simplebank_db
