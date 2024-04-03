@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  postgres:
+    image: postgres:13.3
+    env_file:
+      - .env/psql_creds.env
+    environment:
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - .data:/var/lib/postgresql/data
+    ports:
+      - "5542:5432"
+    restart: always
